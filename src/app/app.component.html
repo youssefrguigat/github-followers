@@ -1,21 +1,31 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
+<!--<ul class="nav nav-pills">
+    <li [class.active]="viewCourse == 'Laravel'"><a (click)="viewCourse = 'Laravel'">Laravel</a></li>
+    <li [class.active]="viewCourse == 'Angular'"><a (click)="viewCourse = 'Angular'">Angular</a></li>
+    <li [class.active]="viewCourse == 'Symfony'"><a (click)="viewCourse = 'Symfony'">Symfony</a></li>
 </ul>
 
-<router-outlet></router-outlet>
+<div [ngSwitch]="viewCourse">
+    <div *ngSwitchCase="'Laravel'">Lorem Laravel</div>
+    <div *ngSwitchCase="'Angular'">Lorem Angular</div>
+    <div *ngSwitchCase="'Symfony'">Lorem Symfony</div>
+    <div *ngSwitchDefault>autre chose</div>
+</div>
+<input type="text" [appInputFormat] = "'ddd'">
+<br>
+<h3>{{ personne.name }}</h3>
+<p>{{ personne.adress?.city }} | {{ personne.adress?.sector }}</p>
+<button class="btn btn-primary" (click)="loadCourses()">Charger</button>
+<button class="btn btn-success" (click)="addCourse()">Ajouter</button>
+<ul class="list-group">
+    <li *ngFor="let course of courses; index as i; trackBy:trackCourse" class="list-group-item">
+        {{ i }} - {{ course.id }} | {{ course.title }} 
+        <button class="btn btn-danger" (click)="deleteCourse(course)">Supprimer</button>
+        <button class="btn btn-warning" (click)="editCourse(course)">Modifier</button> 
+    </li>
+</ul>
+
+<favorite (change)="onfavoriteChange($event)"></favorite>-->
+<header></header>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

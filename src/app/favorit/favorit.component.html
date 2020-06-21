@@ -1,0 +1,19 @@
+
+  <h1>favorit works!
+    <span           
+          class = "glyphicon "
+          [ngClass]="{
+            'glyphicon-star':favorite,
+            'glyphicon-star-empty':!favorite
+          }"
+          [ngStyle]="{
+            'color': favorite ? 'orange' : 'blue',
+            'font-size': favorite ? '20px' : '60px'
+          }"
+          (click)="onClick()">
+    </span>
+  </h1>
+  
+    
+  
+
